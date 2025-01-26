@@ -19,7 +19,7 @@ Sistem IDS/IPS ini dirancang untuk mendeteksi dan mencegah ancaman di jaringan d
 
 1. **Clone repository**:
     ```bash
-    git clone https://github.com/username/ids-ips.git
+    git clone https://github.com/Dimas-Alif/ids-ips.git
     cd ids-ips
     ```
 
@@ -76,3 +76,31 @@ Snort akan berjalan dalam mode logging untuk memantau lalu lintas jaringan dan m
       python ids_snort_integration.py
 
 ### 2. Tangkap lalu lintas jaringan
+Setelah Snort dijalankan, Anda dapat menggunakan fitur untuk menangkap dan memproses paket secara real-time dengan menggunakan scapy. Berikut adalah cara untuk menjalankan pemrosesan paket:
+   
+    python ids_snort_integration.py
+### 3. Latih model AI
+Model deteksi anomali berbasis AI dilatih menggunakan dataset yang disediakan. Anda dapat melatih model dengan perintah:
+   
+    python ids_snort_integration.py
+
+### 4. Tampilkan Dashboard dengan Streamlit
+Gunakan Streamlit untuk menampilkan dashboard yang memberikan statistik ancaman dan log lalu lintas jaringan:
+
+    streamlit run ids_snort_integration.py
+
+## Pengaturan dan Konfigurasi
+- Elasticsearch: Pastikan Anda telah menjalankan server Elasticsearch pada URL yang ditentukan dalam file .env.
+- Kafka: Server Kafka harus aktif dan dikonfigurasi sesuai dengan pengaturan di file .env.
+- Snort: Pastikan Snort telah diinstal dan dikonfigurasi dengan benar.
+
+## Dependensi
+
+- **scapy**: Untuk menangkap dan memproses paket jaringan.
+- **pyshark**: Untuk analisis paket mendalam (DPI).
+- **sklearn**: Untuk pelatihan model AI.
+- **tensorflow**: Untuk model AI berbasis Keras.
+- **requests**: Untuk komunikasi dengan API eksternal (AbuseIPDB).
+- **elasticsearch**: Untuk menyimpan dan mencari log di Elasticsearch.
+- **kafka-python**: Untuk pengelolaan Kafka.
+- **cryptography**: Untuk enkripsi data log.
