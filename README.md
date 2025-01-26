@@ -19,7 +19,7 @@ Sistem IDS/IPS ini dirancang untuk mendeteksi dan mencegah ancaman di jaringan d
 
 1. **Clone repository**:
     ```bash
-    git clone https://github.com/Dimas-Alif/ids-ips.git
+    git clone https://github.com/Dimas-Alif/Simple-IDS-IPS.git
     cd ids-ips
     ```
 
